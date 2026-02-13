@@ -16,31 +16,43 @@ public class Student {
      * - gpa must be in [0.0, 4.0]
      * - id must be > 0
      *
+     *
      * @throws IllegalArgumentException if any argument is invalid
      */
     public Student(String name, double gpa, int id) {
         // TODO: validate and assign fields
-        throw new UnsupportedOperationException("Not implemented yet");
+        if(name ==null){
+            throw new IllegalArgumentException("nope");
+        }
+        if(gpa<0.0 || gpa>4.0){
+            throw new IllegalArgumentException("nuh uh");
+        }
+        if(id<=0){
+            throw new IllegalArgumentException("nah");
+        }
+
+       this.name=name;
+        this.id=id;
+        this.gpa=gpa;
+
     }
 
     public String getName() {
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet");
+        return name;
     }
 
     public double getGpa() {
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet");
+      return gpa;
     }
 
     public int getId() {
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet");
+    return id;
     }
 
     @Override
     public String toString() {
-        // TODO: return readable summary, e.g. "Student{id=..., name='...', gpa=...}"
-        throw new UnsupportedOperationException("Not implemented yet");
+        return "Student{id=" + id+ ", name=" + name + ",gpa= " + gpa + "}";
+
+
     }
 }

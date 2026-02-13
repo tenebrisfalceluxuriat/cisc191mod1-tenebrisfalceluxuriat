@@ -2,6 +2,8 @@ package edu.sdccd.cisc191;
 
 import java.util.Arrays;
 
+
+
 /**
  * Module 1 - Part A
  * Utility methods for working with int[].
@@ -16,9 +18,16 @@ public class IntArrayToolkit {
      * Returns the sum of all values in the array.
      * @throws IllegalArgumentException if a is null
      */
+
     public static int sum(int[] a) {
         // TODO: implement
-        throw new UnsupportedOperationException("Not implemented yet");
+        int total = 0;
+        for(int i:a){
+            total+= i;
+        }
+
+
+    return total;
     }
 
     /**
@@ -26,8 +35,20 @@ public class IntArrayToolkit {
      * @throws IllegalArgumentException if a is null or empty
      */
     public static int max(int[] a) {
+        if(a ==null){
+            throw new IllegalArgumentException("it aint happening");
+        }
+        int max = a[0];
+        for(int i = 1; i<a.length; i++){
+            if(a[i]> max){
+                max = a[i];
+            }
+
+        }
+
         // TODO: implement
-        throw new UnsupportedOperationException("Not implemented yet");
+
+        return max;
     }
 
     /**
@@ -35,8 +56,19 @@ public class IntArrayToolkit {
      * @throws IllegalArgumentException if a is null
      */
     public static int indexOf(int[] a, int target) {
-        // TODO: implement
-        throw new UnsupportedOperationException("Not implemented yet");
+        if(a ==null){
+            throw new IllegalArgumentException("empty");
+        }
+        for(int i = 0; i<a.length; i++){
+            if(a[i]== target ){
+                return i;
+
+            }
+
+        }
+        return -1;
+
+
     }
 
     /**
@@ -46,6 +78,11 @@ public class IntArrayToolkit {
      */
     public static int[] copySortedAscending(int[] a) {
         // TODO: implement (hint: defensive copy + Arrays.sort)
-        throw new UnsupportedOperationException("Not implemented yet");
+        if(a==null){
+            throw new IllegalArgumentException("nope");
+        }
+        int[] dupe = Arrays.copyOf(a,a.length);
+        Arrays.sort(dupe);
+        return dupe;
     }
 }
