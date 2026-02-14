@@ -21,7 +21,7 @@ public class Student {
      */
     public Student(String name, double gpa, int id) {
         // TODO: validate and assign fields
-        if(name ==null){
+        if(name ==null ||name.trim().isEmpty()){
             throw new IllegalArgumentException("nope");
         }
         if(gpa<0.0 || gpa>4.0){

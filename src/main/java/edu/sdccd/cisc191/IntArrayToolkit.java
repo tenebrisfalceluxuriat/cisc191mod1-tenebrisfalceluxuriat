@@ -21,6 +21,9 @@ public class IntArrayToolkit {
 
     public static int sum(int[] a) {
         // TODO: implement
+        if(a==null){
+            throw new IllegalArgumentException("this is null");
+        }
         int total = 0;
         for(int i:a){
             total+= i;
@@ -35,7 +38,7 @@ public class IntArrayToolkit {
      * @throws IllegalArgumentException if a is null or empty
      */
     public static int max(int[] a) {
-        if(a ==null){
+        if(a ==null || a.length ==0){
             throw new IllegalArgumentException("it aint happening");
         }
         int max = a[0];
