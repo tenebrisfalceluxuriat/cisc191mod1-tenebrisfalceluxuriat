@@ -7,7 +7,6 @@ import java.util.Arrays;
 /**
  * Module 1 - Part A
  * Utility methods for working with int[].
- *
  * IMPORTANT:
  * - Do not print inside these methods.
  * - Do not modify input arrays unless the method explicitly says so.
