@@ -12,10 +12,15 @@ public class Main {
         // TODO: Create at least 6 students and demonstrate:
         Student[]students  = new Student[6];
         students[0] = new Student("A", 3.9, 101);
+
         students[1] = new Student("B", 3.2, 102);
+
         students[2] = new Student("C", 3.7, 103);
+
         students[3] = new Student("D", 2.9, 104);
+
         students[4] = new Student("E", 3.5, 105);
+
         students[5] = new Student("F", 4.0, 106);
 
         System.out.println("Original students:");
